@@ -16,46 +16,42 @@ export const Parallax = ({ type }: ParallaxProps) => {
     offset: ["start start", "end start"],
   });
 
-  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
-  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  // Hiệu ứng cuộn text
+  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
+  const opacityText = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.8, 1],
+    [0, 1, 1, 0]
+  );
+  const scaleText = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+
+  // Hiệu ứng nền di chuyển mượt hơn
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "80%"]);
+  const opacityBg = useTransform(scrollYProgress, [0, 1], [1, 0.6]);
 
   return (
     <div
       ref={ref}
       className={cn(
-        "w-full h-full relative flex items-center justify-center overflow-hidden",
-        {
-          "bg-past-work-gradient": type === "services",
-          "bg-portfolio-gradient": type === "portfolio",
-        }
+        "w-full h-screen relative flex items-center justify-center overflow-hidden"
       )}>
+      {/* Hiệu ứng chữ */}
       <motion.h1
-        style={{ y: yText }}
-        className='uppercase  mx-auto text-centertext-8xl md:text-6xl z-50  w-[60%]'>
+        style={{ y: yText, scale: scaleText }}
+        className='uppercase text-center text-8xl md:text-6xl font-bold text-white z-50 w-[60%] transition-all duration-500 ease-out'>
         {type}
       </motion.h1>
+
+      {/* Background Layer 1 */}
       <motion.div
-        className={cn(
-          "bg-[url(/images/mountains.png)] bg-contain bg-no-repeat md:bg-repeat md:bg-cover bg-bottom w-full h-full absolute z-30"
-        )}
+        style={{ y: yBg, opacity: opacityBg }}
+        className='bg-[url(/images/mountains.png)] bg-cover bg-bottom w-full h-full absolute z-30'
       />
+
+      {/* Background Layer 2 */}
       <motion.div
-        style={{
-          y: yBg,
-        }}
-        className={cn(
-          "bg-contain bg-no-repeat md:bg-cover md:bg-repeat bg-bottom w-full h-full absolute z-20",
-          {
-            "bg-planets-image": type === "services",
-            "bg-sun-image": type === "portfolio",
-          }
-        )}
-      />
-      <motion.div
-        style={{ x: yBg }}
-        className={cn(
-          "bg-[url(/images/stars.png)] bg-cover bg-bottom w-full h-full absolute z-10"
-        )}
+        style={{ y: yBg }}
+        className='bg-[url(/images/stars.png)] bg-cover bg-bottom w-full h-full absolute z-10 opacity-80'
       />
     </div>
   );

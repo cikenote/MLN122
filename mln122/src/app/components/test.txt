@@ -26,7 +26,7 @@
         width={1000}
         height={1000}
       />
-      <h4 className='text-lg'>b. Tích tụ và tập trung tư bản</h4>
+      <h4 className='text-lg'>b. Vai trò của tư bản tài chính trong tập đoàn độc quyền</h4>
       <p className='text-base'>
         Ngành kinh tế &quot;phần mềm&quot; (dịch vụ, bảo hiểm...) phát triển
         mạnh, thúc đẩy liên kết đa dạng (công - nông - thương - tín - dịch vụ)
@@ -138,7 +138,7 @@
         width={1000}
         height={1000}
       />{" "}
-      <h4 className='text-lg'>a. Biểu hiện mới về sở hữu nhà nước</h4>
+      <h4 className='text-lg'>b. Biểu hiện mới về sở hữu nhà nước</h4>
       <p className='text-base'>
         Giới lập pháp kiểm soát ngân sách nhà nước, còn giới hành pháp bị giới
         hạn bởi luật ngân sách
@@ -182,7 +182,7 @@
         height={1000}
       />{" "}
       <h4 className='text-lg'>
-        b. Biểu hiện mới trong vai trò công cụ điều tiết kinh tế
+        c. Biểu hiện mới trong vai trò công cụ điều tiết kinh tế
       </h4>
       <p className='text-base'>
         Độc quyền nhà nước chủ yếu tập trung vào một số lĩnh vực kinh tế quan
