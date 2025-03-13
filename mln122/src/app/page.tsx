@@ -1,0 +1,268 @@
+import Image from "next/image";
+export default function Home() {
+  return (
+    <div>
+      <h1 className='text-center text-2xl'>Biểu hiện mới của độc quyền</h1>
+      <h3 className='text-xl text-green-500'>
+        1. Biểu hiện mới của độc quyền trong điều kiện ngày nay
+      </h3>
+      <h4 className='text-lg'>a. Tích tụ và tập trung tư bản</h4>
+      <p className='text-base'>
+        Xuất hiện công ty độc quyền xuyên quốc gia cùng với sự phát triển của
+        doanh nghiệp vừa và nhỏ
+      </p>
+      <p className='text-base'>
+        Hình thành các Concern (tổ chức độc quyền đa ngành) và Conglomerate (tập
+        hợp nhiều hãng nhỏ, không liên quan trực tiếp về sản xuất)
+      </p>
+      <p className='text-base'>
+        Các doanh nghiệp vừa và nhỏ phát triển nhờ ứng dụng công nghệ, chuyên
+        môn hóa sản xuất và hợp tác với các công ty lớn
+      </p>
+      <p className='text-base'>
+        Độc quyền mở rộng sang cả các nước đang phát triển thông qua các công ty
+        xuyên quốc gia
+      </p>
+      <Image
+        src='/images/image_1.svg'
+        alt='Hình ảnh minh họa'
+        width={1000}
+        height={1000}
+      />
+      <h4 className='text-lg'>b. Tích tụ và tập trung tư bản</h4>
+      <p className='text-base'>
+        Ngành kinh tế &quot;phần mềm&quot; (dịch vụ, bảo hiểm...) phát triển
+        mạnh, thúc đẩy liên kết đa dạng (công - nông - thương - tín - dịch vụ)
+      </p>
+      <p className='text-base'>
+        Cơ chế cổ phiếu thay đổi, tạo &quot;chế độ ủy nhiệm&quot; giúp đại cổ
+        đông kiểm soát công ty
+      </p>
+      <p className='text-base'>
+        Thành lập ngân hàng đa quốc gia và trung tâm tài chính toàn cầu để điều
+        tiết kinh tế
+      </p>
+      <Image
+        src='/images/image_2.svg'
+        alt='Hình ảnh minh họa'
+        width={1000}
+        height={1000}
+      />
+      <h4 className='text-lg'>c. Xuất khẩu tư bản</h4>
+      <p className='text-base'>
+        Trước đây, tư bản chủ yếu chảy từ nước phát triển sang kém phát triển,
+        nhưng nay chủ yếu luân chuyển giữa các nước phát triển
+      </p>
+      <p className='text-base'>
+        Công ty xuyên quốc gia (TNCs) đóng vai trò chính trong đầu tư trực tiếp
+        nước ngoài (FDI)
+      </p>
+      <p className='text-base'>
+        Xuất hiện các hình thức đầu tư mới như BOT, BT, kết hợp xuất khẩu tư bản
+        với thương mại và dịch vụ
+      </p>
+      <p className='text-base'>
+        Nguyên tắc cùng có lợi trong đầu tư thay thế hình thức áp đặt kiểu thực
+        dân
+      </p>
+      <Image
+        src='/images/image_3.svg'
+        alt='Xuat khau tu ban'
+        width={1000}
+        height={1000}
+      />
+      <h4 className='text-lg'>d. Phân chia thị trường thế giới</h4>
+      <p className='text-base'>
+        Xu hướng toàn cầu hóa thúc đẩy TNCs bành trướng, hình thành chủ nghĩa tư
+        bản độc quyền quốc tế
+      </p>
+      <p className='text-base'>
+        Đồng thời, khu vực hóa kinh tế diễn ra mạnh mẽ (EU, NAFTA, OPEC,
+        MERCOSUR)
+      </p>
+      <p className='text-base'>
+        Các nước đang phát triển thành lập liên minh kinh tế để đối phó với áp
+        lực từ cường quốc tư bản
+      </p>
+      <Image
+        src='/images/image_4.svg'
+        alt='Hình ảnh minh họa'
+        width={1000}
+        height={1000}
+      />
+      <Image
+        src='/images/image_5.svg'
+        alt='Hình ảnh minh họa'
+        width={1000}
+        height={1000}
+      />{" "}
+      <Image
+        src='/images/image_6.svg'
+        alt='Hình ảnh minh họa'
+        width={1000}
+        height={1000}
+      />{" "}
+      <div className='border shadow-2xl border-emerald-500 bg-emerald-500 rounded-3xl p-4'>
+        👉 Kết luận: Chủ nghĩa tư bản ngày nay có sự thay đổi mạnh mẽ, độc quyền
+        mở rộng cả về quy mô và phạm vi hoạt động, kết hợp chặt chẽ với nhà
+        nước, tài chính và công nghệ để kiểm soát nền kinh tế toàn cầu
+      </div>
+      <Image
+        src='/images/image_7.svg'
+        alt='Hình ảnh minh họa'
+        width={1000}
+        height={1000}
+      />{" "}
+      <h3 className='text-xl text-green-500'>
+        2. Biểu hiện mới của độc quyền nhà nước dưới chủ nghĩa tư bản
+      </h3>
+      <h4 className='text-lg'>a. Biểu hiện mới về cơ chế quan hệ nhân sự</h4>
+      <p className='text-base'>
+        Thể chế đa nguyên trong phân chia quyền lực nhà nước ngày càng phổ biến
+      </p>
+      <p className='text-base'>
+        Các thế lực tư bản độc quyền không thể độc tôn, chuyên quyền mà phải
+        thỏa hiệp để cùng tồn tại và chia sẻ quyền lực{" "}
+      </p>
+      <p className='text-base'>
+        Trong nhiều trường hợp, quyền lực nhà nước lại thuộc về một thế lực
+        trung dung, tạo nên hệ thống kinh tế - chính trị ôn hòa hơn, ít cực đoan
+        hơn so với trước đây{" "}
+      </p>
+      <Image
+        src='/images/image_8.svg'
+        alt='Hình ảnh minh họa'
+        width={1000}
+        height={1000}
+      />{" "}
+      <Image
+        src='/images/image_9.svg'
+        alt='Hình ảnh minh họa'
+        width={1000}
+        height={1000}
+      />{" "}
+      <h4 className='text-lg'>a. Biểu hiện mới về sở hữu nhà nước</h4>
+      <p className='text-base'>
+        Giới lập pháp kiểm soát ngân sách nhà nước, còn giới hành pháp bị giới
+        hạn bởi luật ngân sách
+      </p>
+      <p className='text-base'>
+        Chống lạm phát và thất nghiệp trở thành ưu tiên hàng đầu
+      </p>
+      <p className='text-base'>
+        Cổ phần nhà nước trong các ngân hàng và tập đoàn lớn ngày càng phổ biến{" "}
+      </p>
+      <p className='text-base'>
+        Đầu tư nhà nước đóng vai trò quan trọng trong nghiên cứu khoa học, hạ
+        tầng và các nhu cầu xã hội, trong khi tư nhân tập trung vào các lĩnh vực
+        có lợi nhuận cao{" "}
+      </p>
+      <p className='text-base'>
+        Các tập đoàn độc quyền hưởng lợi lớn từ các dự án đầu tư công, nhờ lợi
+        thế đấu thầu bằng ngân sách nhà nước{" "}
+      </p>{" "}
+      <p className='text-base'>
+        Nhà nước tư bản hiện đại kiểm soát nền kinh tế vĩ mô qua thu-chi ngân
+        sách, lãi suất, trợ giá, tỷ giá hối đoái,...
+      </p>{" "}
+      <p className='text-base'>
+        Khi có khủng hoảng kinh tế, ngân sách nhà nước cứu các tập đoàn lớn khỏi
+        phá sản{" "}
+      </p>
+      <p className='text-base'>
+        Một số nước hợp pháp hóa ưu tiên chi tiêu ngân sách cho các vấn đề xã
+        hội như bảo vệ môi trường, an sinh xã hội (ví dụ: Na Uy có giáo dục & y
+        tế miễn phí)
+      </p>
+      <p className='text-base'>
+        Những cải cách này không phải là sự &quot;thức tỉnh&quot; của tư bản, mà
+        là kết quả của đấu tranh lâu dài của nhân dân
+      </p>
+      <Image
+        src='/images/image_10.svg'
+        alt='Hình ảnh minh họa'
+        width={1000}
+        height={1000}
+      />{" "}
+      <h4 className='text-lg'>
+        b. Biểu hiện mới trong vai trò công cụ điều tiết kinh tế
+      </h4>
+      <p className='text-base'>
+        Độc quyền nhà nước chủ yếu tập trung vào một số lĩnh vực kinh tế quan
+        trọng
+      </p>
+      <p className='text-base'>
+        Chính phủ & nghị viện tư sản vận hành như một công ty cổ phần, trong đó
+        quyền lực chủ yếu vẫn thuộc về tầng lớp tư sản độc quyền
+      </p>
+      <p className='text-base'>
+        “Đa nguyên tư sản” chỉ được duy trì ở mức không đe dọa đến quyền lực tư
+        bản, giúp xoa dịu làn sóng đấu tranh chống tư bản lũng đoạn
+      </p>
+      <p className='text-base'>
+        Viện trợ nước ngoài trở thành công cụ điều tiết kinh tế nội địa
+      </p>
+      <p className='text-base'>
+        Khi quyền lực tư sản bị đe dọa, họ sẵn sàng: Giải tán chính phủ/quốc
+        hội, Ban bố tình trạng khẩn cấp, Đảo chính quân sự
+      </p>
+      <Image
+        src='/images/image_11.svg'
+        alt='Hình ảnh minh họa'
+        width={1000}
+        height={1000}
+      />{" "}
+      <div className='border shadow-2xl border-emerald-500 bg-emerald-500 rounded-3xl p-4'>
+        👉 Kết luận: Độc quyền nhà nước dưới chủ nghĩa tư bản ngày nay thể hiện
+        qua: cơ chế phân chia quyền lực thỏa hiệp, sự kiểm soát mạnh mẽ ngân
+        sách nhà nước, bảo vệ lợi ích tư bản thông qua đầu tư công & cứu trợ
+        khủng hoảng, cũng như tận dụng viện trợ quốc tế để thúc đẩy lợi ích kinh
+        tế trong nước
+      </div>
+      <Image
+        src='/images/image_12.svg'
+        alt='Hình ảnh minh họa'
+        width={1000}
+        height={1000}
+      />{" "}
+      <h3 className='text-xl text-green-500'>
+        3. Vai trò lịch sử của chủ nghĩa tư bản
+      </h3>
+      <h4 className='text-lg'>a. Vai trò tích cực của chủ nghĩa tư bản</h4>
+      <p className='text-base'>
+        Thúc đẩy lực lượng sản xuất phát triển nhanh chóng{" "}
+      </p>
+      <p className='text-base'>
+        Chuyển nền sản xuất nhỏ thành nền sản xuất lớn hiện đại{" "}
+      </p>
+      <p className='text-base'>Thực hiện xã hội hóa sản xuất</p>
+      <Image
+        src='/images/image_13.svg'
+        alt='Hình ảnh minh họa'
+        width={1000}
+        height={1000}
+      />{" "}
+      <h4 className='text-lg'>
+        b. Những giới hạn phát triển của chủ nghĩa tư bản
+      </h4>
+      <p className='text-base'>
+        Mục đích sản xuất chủ yếu vì lợi ích của giai cấp tư sản
+      </p>
+      <p className='text-base'>Gây ra chiến tranh và xung đột toàn cầu</p>
+      <p className='text-base'>Phân hóa giàu - nghèo ngày càng sâu sắc</p>
+      <p className='text-base'>Mâu thuẫn nội tại của chủ nghĩa tư bản</p>
+      <Image
+        src='/images/image_14.svg'
+        alt='Hình ảnh minh họa'
+        width={1000}
+        height={1000}
+      />
+      <Image
+        src='/images/image_15.svg'
+        alt='Hình ảnh minh họa'
+        width={1000}
+        height={1000}
+      />
+    </div>
+  );
+}
