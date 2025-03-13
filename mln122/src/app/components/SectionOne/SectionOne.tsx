@@ -2,8 +2,7 @@
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
-import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import "swiper/css";
 import { SectionOneDetails } from "./SectionOneDetails";
 
@@ -44,7 +43,7 @@ const imageData = [
 
 export const SectionOne = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [activeSection, setActiveSection] = useState(0);
+  const [, setActiveSection] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -85,12 +84,12 @@ export const SectionOne = () => {
         sectionRefs.current.forEach((ref, index) => {
           if (!ref) return;
 
-          const { offsetTop, offsetHeight } = ref;
-          const sectionCenter = offsetTop + offsetHeight / 2;
-          const viewportCenter = scrollPosition + containerHeight / 2;
+          const { offsetTop } = ref;
+          // const sectionCenter = offsetTop + offsetHeight / 2;
+          // const viewportCenter = scrollPosition + containerHeight / 2;
 
           // Calculate how close the section center is to the viewport center
-          const distance = Math.abs(sectionCenter - viewportCenter);
+          // const distance = Math.abs(sectionCenter - viewportCenter);
 
           if (scrollPosition >= offsetTop - containerHeight / 3) {
             newActiveSection = index;
@@ -112,40 +111,40 @@ export const SectionOne = () => {
   }, []);
 
   // Improved smooth scroll to section
-  const scrollToSection = (index: number) => {
-    const ref = sectionRefs.current[index];
-    if (ref && containerRef.current) {
-      const targetPosition = ref.offsetTop;
+  // const scrollToSection = (index: number) => {
+  //   const ref = sectionRefs.current[index];
+  //   if (ref && containerRef.current) {
+  //     const targetPosition = ref.offsetTop;
 
-      // Animate scroll with framer-motion
-      const startPosition = containerRef.current.scrollTop;
-      const distance = targetPosition - startPosition;
+  //     // Animate scroll with framer-motion
+  //     const startPosition = containerRef.current.scrollTop;
+  //     const distance = targetPosition - startPosition;
 
-      const startTime = performance.now();
-      const duration = 800; // ms
+  //     const startTime = performance.now();
+  //     const duration = 800; // ms
 
-      // Easing function for smooth acceleration and deceleration
-      const easeInOutCubic = (t: number) =>
-        t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  //     // Easing function for smooth acceleration and deceleration
+  //     const easeInOutCubic = (t: number) =>
+  //       t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 
-      const animateScroll = (currentTime: number) => {
-        const elapsedTime = currentTime - startTime;
-        const progress = Math.min(elapsedTime / duration, 1);
-        const easedProgress = easeInOutCubic(progress);
+  //     const animateScroll = (currentTime: number) => {
+  //       const elapsedTime = currentTime - startTime;
+  //       const progress = Math.min(elapsedTime / duration, 1);
+  //       const easedProgress = easeInOutCubic(progress);
 
-        if (containerRef.current) {
-          containerRef.current.scrollTop =
-            startPosition + distance * easedProgress;
-        }
+  //       if (containerRef.current) {
+  //         containerRef.current.scrollTop =
+  //           startPosition + distance * easedProgress;
+  //       }
 
-        if (progress < 1) {
-          requestAnimationFrame(animateScroll);
-        }
-      };
+  //       if (progress < 1) {
+  //         requestAnimationFrame(animateScroll);
+  //       }
+  //     };
 
-      requestAnimationFrame(animateScroll);
-    }
-  };
+  //     requestAnimationFrame(animateScroll);
+  //   }
+  // };
 
   // Create parallax values for different elements
   const headerOpacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
@@ -274,7 +273,9 @@ export const SectionOne = () => {
         {imageData.map((item, index) => (
           <div
             key={item.id}
-            ref={(el) => (sectionRefs.current[index + 1] = el)}
+            ref={(el) => {
+              sectionRefs.current[index + 1] = el;
+            }}
             className='w-full h-screen flex items-center justify-center'
             style={{ scrollSnapAlign: "start" }}>
             <motion.div

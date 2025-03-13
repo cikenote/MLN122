@@ -18,11 +18,11 @@ export const Parallax = ({ type }: ParallaxProps) => {
 
   // Hiệu ứng cuộn text
   const yText = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
-  const opacityText = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.8, 1],
-    [0, 1, 1, 0]
-  );
+  // const opacityText = useTransform(
+  //   scrollYProgress,
+  //   [0, 0.2, 0.8, 1],
+  //   [0, 1, 1, 0]
+  // );
   const scaleText = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
 
   // Hiệu ứng nền di chuyển mượt hơn
