@@ -45,39 +45,49 @@ const SectionTwo = () => {
     damping: 30,
   });
   return (
-    <div ref={ref} className="relative scroll-smooth">
-      <div className="sticky top-0 bg-black absolute">
-        <h2 className="text-center text-orange-400  text-2xl md:text-5xl mt-20 ">
+    <div ref={ref} className='relative scroll-smooth'>
+      <div className='sticky top-0 bg-black absolute'>
+        <h2 className='text-center text-orange-400  text-2xl md:text-5xl mt-20 '>
           Biểu hiện mới của độc quyền nhà nước dưới chủ nghĩa tư bản
         </h2>
 
-        <article className=" left-0  flex flex-col gap-2">
-          <motion.div style={{ scaleX }} className="h-2 bg-white" />
+        <article className=' mb-2 mt-2 left-0  flex flex-col gap-2'>
+          <motion.div style={{ scaleX }} className='h-2 bg-white' />
         </article>
       </div>
-      <div className="m-10">
+      <div className='m-10'>
         {data.map((item) => (
-          <div key={item.id} className="flex flex-col gap-20">
+          <div key={item.id} className='flex flex-col gap-20'>
             <SectionTwoDetails {...item} />
           </div>
         ))}
       </div>
-      <section className="w-full h-[1000px] snap-center bg-black z-50 ">
-        <Image
-          src="/images/image_12.svg"
-          alt="Hình ảnh minh họa"
-          width={1200}
-          height={1000}
-        />{" "}
-      </section>
+      <section className='w-full flex items-center justify-center h-screen snap-center bg-black gap-10 p-6'>
+        <motion.div
+          initial={{ y: 0 }}
+          animate={{ y: [0, -10, 0] }} // Chuyển động lên xuống
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }} // Lặp vô hạn
+          className='border text-white shadow-2xl w-[550px] flex justify-center items-center h-[550px] border-emerald-500 bg-emerald-500 rounded-3xl p-4 text-4xl text-center'>
+          👉 Kết luận: Độc quyền nhà nước dưới chủ nghĩa tư bản ngày nay thể
+          hiện qua: cơ chế phân chia quyền lực thỏa hiệp, sự kiểm soát mạnh mẽ
+          ngân sách nhà nước, bảo vệ lợi ích tư bản thông qua đầu tư công & cứu
+          trợ khủng hoảng, cũng như tận dụng viện trợ quốc tế để thúc đẩy lợi
+          ích kinh tế trong nước
+        </motion.div>
 
-      <div className="border shadow-2xl border-emerald-500 bg-emerald-500 rounded-3xl p-4 mt-20 w-full  snap-center z-50 text-4xl">
-        👉 Kết luận: Độc quyền nhà nước dưới chủ nghĩa tư bản ngày nay thể hiện
-        qua: cơ chế phân chia quyền lực thỏa hiệp, sự kiểm soát mạnh mẽ ngân
-        sách nhà nước, bảo vệ lợi ích tư bản thông qua đầu tư công & cứu trợ
-        khủng hoảng, cũng như tận dụng viện trợ quốc tế để thúc đẩy lợi ích kinh
-        tế trong nước
-      </div>
+        <motion.div
+          animate={{ x: [0, 15, -15, 0] }} // Di chuyển trái phải
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }} // Lặp vô hạn
+        >
+          <Image
+            src='/images/image_12.svg'
+            alt='Hình ảnh minh họa'
+            width={750}
+            height={750}
+            className='rounded-2xl shadow-lg'
+          />
+        </motion.div>
+      </section>
     </div>
   );
 };

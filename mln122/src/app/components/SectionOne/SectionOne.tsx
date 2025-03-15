@@ -152,17 +152,16 @@ export const SectionOne = () => {
 
   return (
     <div className='relative w-full h-screen flex flex-col'>
+      <h2 className='text-center mt-2 z-20 text-purple-400 text-2xl md:text-2xl'>
+        Biểu hiện mới của độc quyền trong điều kiện ngày nay
+      </h2>
       {/* Sticky Header with improved animations */}
       <motion.article
-        className='sticky top-0 left-0 pt-4 md:pt-6 flex flex-col gap-2 z-20 bg-indigo-950/80 backdrop-blur-sm'
+        className='sticky top-0 left-0 pt-2 md:pt-4 flex flex-col gap-2 z-20 bg-indigo-950/80 backdrop-blur-sm'
         style={{
           opacity: headerOpacity,
           y: headerY,
         }}>
-        <h2 className='text-center text-purple-400 text-2xl md:text-4xl'>
-          Biểu hiện mới của độc quyền trong điều kiện ngày nay
-        </h2>
-
         {/* Progress bar */}
         <motion.div
           className='h-1 bg-purple-500 origin-left'
@@ -173,102 +172,11 @@ export const SectionOne = () => {
       {/* Scrollable Container with improved scroll behavior */}
       <div
         ref={containerRef}
-        className='flex-1 h-[90vh] overflow-x-hidden scroll-smooth'
+        className='flex-1 overflow-y-auto scroll-smooth'
         style={{
           scrollSnapType: "y mandatory",
           scrollBehavior: "smooth",
         }}>
-        {/* Overview Section with staggered animations */}
-        {/* <div
-          ref={(el) => (sectionRefs.current[0] = el)}
-          className='w-full h-screen flex items-center justify-center'
-          style={{ scrollSnapAlign: "start" }}>
-          <motion.article
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: false, amount: 0.3 }}
-            className='flex flex-wrap justify-center gap-6 mx-auto p-6 w-full max-w-6xl'>
-            {imageData.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.15,
-                  type: "spring",
-                  stiffness: 100,
-                  damping: 15,
-                }}
-                viewport={{ once: false, amount: 0.2 }}
-                className='border border-gray-500 z-50 p-6 text-gray-100 hover:bg-gray-100 hover:text-black rounded-md transition-all cursor-pointer backdrop-blur-sm bg-indigo-900/30'
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 0 15px rgba(147, 51, 234, 0.5)",
-                  transition: { duration: 0.3 },
-                }}
-                onClick={() => scrollToSection(index + 1)}>
-                <motion.h5
-                  className='text-xl font-semibold mb-4'
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{
-                    delay: 0.2 + index * 0.15,
-                    type: "spring",
-                  }}>
-                  {item.title}
-                </motion.h5>
-
-                <Swiper
-                  spaceBetween={10}
-                  slidesPerView={1}
-                  className='w-full max-w-xs bg-indigo-950 rounded-lg overflow-hidden'>
-                  {item.images.map((img, i) => (
-                    <SwiperSlide key={i}>
-                      <Dialog>
-                        <DialogTrigger
-                          className='bg-indigo-950 w-full'
-                          onClick={(e) => {
-                            e.stopPropagation(); // Prevent triggering the parent onClick
-                            setSelectedImage(img);
-                          }}>
-                          <motion.div
-                            whileHover={{
-                              scale: 1.03,
-                              transition: { duration: 0.3 },
-                            }}
-                            whileTap={{ scale: 0.98 }}
-                            className='overflow-hidden rounded-md'>
-                            <Image
-                              src={img || "/placeholder.svg"}
-                              alt={item.title}
-                              width={1000}
-                              height={1000}
-                              className='rounded-md transition-all duration-500 hover:brightness-110'
-                            />
-                          </motion.div>
-                        </DialogTrigger>
-                      </Dialog>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-
-                <motion.p
-                  className='mt-4 text-sm text-gray-300 line-clamp-2'
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{
-                    delay: 0.3 + index * 0.15,
-                    type: "spring",
-                  }}>
-                  {item.description}
-                </motion.p>
-              </motion.div>
-            ))}
-          </motion.article>
-        </div> */}
-
         {/* Add detail sections with improved animations */}
         {imageData.map((item, index) => (
           <div
@@ -276,14 +184,14 @@ export const SectionOne = () => {
             ref={(el) => {
               sectionRefs.current[index + 1] = el;
             }}
-            className='w-full h-screen flex items-center justify-center'
+            className='w-full flex items-center justify-center'
             style={{ scrollSnapAlign: "start" }}>
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: false, amount: 0.3 }}
-              className='w-full max-w-6xl p-6'>
+              className=' mb-20 max-w-6xl p-6'>
               <SectionOneDetails item={item} />
             </motion.div>
           </div>
