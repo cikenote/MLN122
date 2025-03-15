@@ -33,25 +33,27 @@ export const Parallax = ({ type }: ParallaxProps) => {
     <div
       ref={ref}
       className={cn(
-        "w-full h-screen relative flex items-center justify-center overflow-hidden"
-      )}>
+        "w-full h-screen relative flex items-center justify-center overflow-hidden z-50"
+      )}
+    >
       {/* Hiệu ứng chữ */}
       <motion.h1
         style={{ y: yText, scale: scaleText }}
-        className='uppercase text-center text-8xl md:text-6xl font-bold text-white z-50 w-[60%] transition-all duration-500 ease-out'>
+        className="uppercase text-center text-8xl md:text-6xl font-bold text-white z-50 w-[60%] transition-all duration-500 ease-out"
+      >
         {type}
       </motion.h1>
 
       {/* Background Layer 1 */}
       <motion.div
         style={{ y: yBg, opacity: opacityBg }}
-        className='bg-[url(/images/mountains.png)] bg-cover bg-bottom w-full h-full absolute z-30'
+        className="bg-[url(/images/mountains.png)] bg-cover bg-bottom w-full h-full absolute z-30"
       />
 
       {/* Background Layer 2 */}
       <motion.div
         style={{ y: yBg }}
-        className='bg-[url(/images/stars.png)] bg-cover bg-bottom w-full h-full absolute z-10 opacity-80'
+        className="bg-[url(/images/stars.png)] bg-cover bg-bottom w-full h-full absolute z-10 opacity-80"
       />
     </div>
   );
